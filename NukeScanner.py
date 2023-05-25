@@ -83,6 +83,8 @@ class NukeScanner:
         self.__retrieve_shot()
         if self.__shot_dir is not None:
             self.__retrieve_files()
+        else:
+            print("SHOT DIR NOT FOUND")
 
     def __retrieve_shot(self):
         self.__compo_filepath = nuke.root()['name'].value().replace("\\", "/")
